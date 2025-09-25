@@ -1,0 +1,95 @@
+nav {
+  background-color: #388BF5;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+ul li {
+  margin: 0;
+}
+ul li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul li a:hover {
+  background-color: #384FF5;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.botao {
+  display: block;
+  margin: 20px auto;
+  background-color: #48F538;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.botao:hover {
+  background-color: #F58100;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.cards > div h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cards > div p {
+  font-size: 1rem;
+  text-align: center;
+  color: #444;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.cards > div {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid transparent;
+}
+.cards > div:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.cards .card1 {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid blue;
+}
+.cards .card2 {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid blueviolet;
+}
+.cards .card3 {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid green;
+}
+
+/*# sourceMappingURL=desafio.css.map */

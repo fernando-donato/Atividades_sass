@@ -1,0 +1,128 @@
+//ATIVIDADE 1
+
+$cor-primaria-nav: #388BF5;
+$cor-secudaria-nav: #384FF5;
+$cor-primaria-botao: #48F538;
+$cor-secundaria-botao: #38F56C;
+
+
+
+nav {
+  background-color: $cor-primaria-nav;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  li {
+    margin: 0;
+
+    a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 2em;
+      font-family: Arial, Helvetica, sans-serif;
+
+
+      &:hover {
+        background-color: $cor-secudaria-nav;
+        color: white;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+.botao {
+  display: block;
+  margin: 20px auto;
+  background-color: $cor-primaria-botao;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: #F58100;
+    color: white;
+    transition: all 0.3s ease;
+  }
+}
+
+//ATIVIDADE 2
+
+$cor-principal-card: #f0f0f0;
+$cor-destaque-card1: blue;
+$cor-destaque-card2: blueviolet;
+$cor-destaque-card3: green;
+
+// MIXIN para estilizar cada card
+@mixin card-estilizado($raio, $sombra, $cor) {
+  border-radius: $raio;
+  box-shadow: $sombra;
+  border-top: 5px solid $cor;
+}
+
+// PLACEHOLDERS para reutilização
+%titulo-card {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+%texto-card {
+  font-size: 1rem;
+  text-align: center;
+  color: #444;
+}
+
+// CLASSES PRINCIPAIS
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Responsivo
+  gap: 20px;
+  padding: 20px;
+
+  > div {
+    background-color: $cor-principal-card;
+    padding: 20px;
+    @include card-estilizado(8px, 0 4px 8px rgba(0, 0, 0, 0.1), transparent); 
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      @extend %titulo-card;
+    }
+
+    p {
+      @extend %texto-card;
+    }
+  }
+
+  .card1 {
+    @include card-estilizado(8px, 0 4px 8px rgba(0, 0, 0, 0.1), $cor-destaque-card1);
+  }
+
+  .card2 {
+    @include card-estilizado(8px, 0 4px 8px rgba(0, 0, 0, 0.1), $cor-destaque-card2);
+  }
+
+  .card3 {
+    @include card-estilizado(8px, 0 4px 8px rgba(0, 0, 0, 0.1), $cor-destaque-card3);
+  }
+}
